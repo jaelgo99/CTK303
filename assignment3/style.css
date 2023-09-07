@@ -1,0 +1,75 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inter, sans-serif;
+    background: rgb(158,27,27);
+    background: linear-gradient(90deg, rgba(158,27,27,1) 0%, rgba(240,147,99,1) 32%, rgba(5,74,179,1) 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Jaellogo {
+    width: 500px; display: block;
+    animation: size 5s linear;
+
+}
+
+#musicNote {
+    background-color: blue;
+}
+
+@keyframes size {
+    0%   { scale: 0.1;}
+    50% { transform: rotate(0deg);}
+}
+
+
+@keyframes music {
+    0%   { transform: rotate(360deg);}
+    50% { transform: rotate(0deg);}
+}
+
+@keyframes star-ani {
+    0%   { transform: rotate(360deg);}
+    50% { transform: rotate(0deg);} 
+}
+
+@keyframes color-fill {
+
+    50% { fill:black;} 
+    100% { fill:rgb(173, 140, 7);} 
+}
+
+@keyframes textsize {
+    0%   { transform: scale(0.1);}
+    100% { transform: scale(1.0);}
+}
+
+#musicNote {
+    fill: blue;
+    animation: music 10s ease-out;
+    transform-origin: center ;
+}
+
+#star {
+    animation: star-ani 10s ease-out;
+    transform-origin: center ;
+}
+
+#Vector {
+    animation: color-fill 10s ease-out;
+ 
+}
+
+#Jaeltxt {
+    animation: textsize 5s ease-out;
+}
+#Jaeltxt:hover {
+    fill: seagreen;
+}
+
