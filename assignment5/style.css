@@ -1,0 +1,206 @@
+body{
+    margin:auto auto;
+    padding: 0;
+    background: linear-gradient(90deg, rgb(46, 9, 9) 0%, rgba(9,80,121,1) 32%, rgba(0,212,255,1) 100%);
+    color: aliceblue;
+    font-family: 'Work Sans', sans-serif;
+    height: auto;
+   
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    color: aliceblue;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.nav-list li{
+    margin: 0 20px;
+}
+
+.bg-animation{
+    
+    overflow: hidden;
+ 
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+}
+
+.content{
+    width: 500px;
+    padding: 50px;
+
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    position: relative;
+    z-index: 999;
+    margin: 24px;
+}
+
+.grid-item{
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(169, 81, 81, 0.044);
+    border-radius: 16px;
+    background-color: rgba(127, 255, 212, 0.088);
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+}
+
+@media all and (min-width: 30rem) {
+    .Grid {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+@media all and (min-width: 50rem) {
+    .Grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media all and (min-width: 60rem) {
+    .Grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 960px;
+
+    }
+}
+.btn{
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: rgb(46, 9, 9);
+    color: aliceblue;
+    border: none;
+    width: 200px;
+    transition: width 1s, background-color 1s;
+}
+.anibtn{
+    padding: 4px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.btn:hover{
+    background-color: rgb(86, 1, 1);
+    color: aliceblue;
+    width: 220px;
+}
+
+
+#up{
+    position: fixed;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgb(46, 9, 9) 0%, rgb(86, 1, 1) 32%, rgb(0, 192, 231) 100%);
+    filter: blur(80px);
+    animation: up 15s linear infinite;
+}
+
+#down{
+    position: fixed;
+    top: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgb(46, 9, 9) 0%, rgb(120, 89, 10) 32%, rgb(0, 192, 231) 100%);
+    filter: blur(80px);
+    animation: down 18s linear infinite;
+}
+  
+#left{
+    position: fixed;
+    left: 0; 
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgb(46, 9, 9) 0%, rgb(9, 132, 106) 32%, rgb(0, 192, 231) 100%);
+    filter: blur(80px);
+    animation: left-ani 16s linear infinite;
+}
+
+#right{
+    position: fixed;
+    right: 0; 
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, rgb(46, 9, 9) 0%, rgb(3, 62, 189) 32%, rgb(0, 192, 231) 100%);
+    filter: blur(80px);
+    animation: right-ani 20s linear infinite;
+}
+
+@keyframes up{
+    0%{
+        transform: translateY(0);
+    }
+   50%{
+        transform: translateY(-800px);
+    }
+}
+
+@keyframes down{
+    0%{
+        transform: translateY(0); right:0px;
+    }
+   40%{
+        transform: translateY(800px); right:70px;
+    }
+    100%{
+        right: 0px;
+    }
+} 
+
+@keyframes left-ani{
+    0%{
+        left:0px; transform: translateY(0);
+    }
+   50%{
+        left:800px; transform: translateY(200px);
+    }
+    100%{
+        left:0px; transform: translateY(0);
+    }
+} 
+
+@keyframes right-ani{
+    0%{
+        right:0px; transform: translateY(300px);
+    }
+   50%{
+        right:1000px; transform: translateY(0px);
+    }
+    100%{
+        right:0px; transform: translateY(300px);
+    }
+} 
