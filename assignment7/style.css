@@ -94,10 +94,11 @@ nav{
     }
 }
 .btn{
-    padding: 10px 10px;
+    padding: 10px 16px;
     border-radius: 20px;
     background-color: rgb(46, 9, 9);
     color: aliceblue;
+    text-decoration: none;
     border: none;
     width: 200px;
     transition: width 1s, background-color 1s;
